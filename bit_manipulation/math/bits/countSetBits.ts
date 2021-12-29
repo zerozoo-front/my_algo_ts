@@ -7,6 +7,8 @@ export default function countSetBits(originalNumber: number) {
   while (number) {
     /**
      *
+     * setBits의 의미 = 3 = 0010의 set된 bit는 1 하나 뿐이다.
+     * 4 = 0011이고 set된 bit는 2개이다. 이런식으로 어떤 값의 비트의 수를 세는 것이 countSetBits이다.
      * @param {number} number
      * @return {number}
      *
@@ -40,14 +42,14 @@ export default function countSetBits(originalNumber: number) {
   return setBitsCount;
 }
 
-readline.question(`input : `, (input: string) => {
-  //   console.log(`hello ,`, input);
+// readline.question(`input : `, (input: string) => {
+//   //   console.log(`hello ,`, input);
 
-  const number = Number(input);
-  if (typeof number === 'number') {
-    console.log(countSetBits(number));
-  }
+//   const number = Number(input);
+//   if (typeof number === 'number') {
+//     console.log(countSetBits(number));
+//   }
 
-  console.log('type error');
-  readline.close();
-});
+//   console.log('type error');
+//   readline.close();
+// });
